@@ -15,20 +15,19 @@ public class Main extends Application {
 	@FXML
 	public Parent rootPane;
 	
+	public User patient;
+	public User hcp;
+	
 	//Determine the graphics of the users screen (used for window positioning)
 	public Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-////			rootPane = (Pane)FXMLLoader.load(getClass().getResource("Login.fxml"));
-//			FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
-//			rootPane = loader.load();
-//			Scene scene = new Scene(rootPane, 1000, 800);
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//			primaryStage.setScene(scene);
-//			primaryStage.show();
-			
+
+			// Create some mock users
+			patient = new User("Erin", "Cameron", "857-986-6532", "ercameron@algomau.ca", "algoma123", PermissionEnum.PATIENT);
+			hcp = new User("Emily", "Gray", "416-999-4117", "hcp@algomau.ca", "hcp123", PermissionEnum.HCP);			
 			
 			// Create a scene, set the scene, and load the login page
 			Scene scene = new Scene(new Pane());

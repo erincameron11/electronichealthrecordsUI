@@ -4,10 +4,11 @@ public enum ViewEnum {
 	// List of different views to load
 	LOGIN("Login.fxml"),
 	HOME("Home.fxml"),
+	HCPHOME("HCPHome.fxml"),
 	MED("MedicalInfo.fxml"),
 	APPT("Appointments.fxml"),
 	LAB("LabResults.fxml"),
-	LOGOUT("Login.fxml");
+	FORGOTPASS("ForgotPass.fxml");
 	
 	// Define variable
 	private String filename;

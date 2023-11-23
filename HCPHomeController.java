@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
-public class LabResultsController {
+public class HCPHomeController {
 	
 	@FXML
 	public Pane rootPane;
@@ -28,15 +28,14 @@ public class LabResultsController {
 	
 	@FXML
 	public void labResultsClicked(ActionEvent event) throws IOException {
-		// Do nothing
+		// Render the lab results page
 		ViewSwitcher.switchView(ViewEnum.LAB);
-		
 	}
 	
 	@FXML
 	public void logoClicked(ActionEvent event) throws IOException {
-		// Render the home page
-		ViewSwitcher.switchView(ViewEnum.HOME);
+		// Do nothing
+		ViewSwitcher.switchView(ViewEnum.HCPHOME);
 	}
 	
 	@FXML
