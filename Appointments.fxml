@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppointmentsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1e7fc" height="800.0" layoutX="-3.0" stroke="#ffffff00" strokeType="INSIDE" width="116.0" />
+      <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="392.0" layoutY="26.0" text="APPOINTMENTS" textFill="#2c2c2c" textOverrun="CLIP">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Circle fill="#fa6e6e" layoutX="55.0" layoutY="47.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="46.0" layoutY="25.0" stroke="#ffffff00" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="34.0" layoutY="38.0" stroke="#ffffff00" strokeType="INSIDE" width="44.0" />
+      <Button fx:id="medInfo" layoutX="-1.0" layoutY="263.0" mnemonicParsing="false" onAction="#medInfoClickedAppt" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white;" text="Medical Info" />
+      <Button fx:id="appointments" layoutX="-1.0" layoutY="325.0" mnemonicParsing="false" onAction="#appointmentsClickedAppt" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white;" text="Appointments" />
+      <Button fx:id="labResults" layoutX="-1.0" layoutY="387.0" mnemonicParsing="false" onAction="#labResultsClickedAppt" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white;" text="Lab Results" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="198.0" layoutX="165.0" layoutY="103.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),15, 0, 2, 2);" styleClass="widget" width="774.0" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="421.0" layoutX="165.0" layoutY="325.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),15, 0, 2, 2);" styleClass="widget" width="774.0" />
+      <Label layoutX="195.0" layoutY="122.0" text="EVANS, PATRICIA">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="351.0" text="MEDICAL HISTORY">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Circle fill="#656565" layoutX="350.0" layoutY="429.0" radius="5.0" stroke="#656565" strokeType="INSIDE" />
+      <Circle fill="#656565" layoutX="350.0" layoutY="512.0" radius="5.0" stroke="#656565" strokeType="INSIDE" />
+      <Circle fill="#656565" layoutX="350.0" layoutY="578.0" radius="5.0" stroke="#656565" strokeType="INSIDE" />
+      <Circle fill="#656565" layoutX="350.0" layoutY="605.0" radius="5.0" stroke="#656565" strokeType="INSIDE" />
+      <Circle fill="#656565" layoutX="350.0" layoutY="705.0" radius="5.0" stroke="#656565" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#656565" height="275.0" layoutX="349.0" layoutY="431.0" stroke="#656565" strokeType="INSIDE" width="2.0" />
+      <Label layoutX="260.0" layoutY="420.0" text="June 19, 2023" />
+      <Label layoutX="266.0" layoutY="504.0" text="April 9, 2020" />
+      <Label layoutX="227.0" layoutY="570.0" text="September 29, 2017" />
+      <Label layoutX="253.0" layoutY="596.0" text="January 1, 2017" />
+      <Label layoutX="252.0" layoutY="695.0" text="March 22, 1995" />
+      <Label layoutX="372.0" layoutY="597.0" text="Pregnancy" />
+      <Label layoutX="490.0" layoutY="776.0" text="© EHR Inc., 2023" />
+      <Label layoutX="372.0" layoutY="570.0" text="Birth of first child" />
+      <Label layoutX="372.0" layoutY="504.0" text="Diagnosed with COVID" />
+      <Label layoutX="370.0" layoutY="644.0" text="Diagnosed with Asthma" />
+      <Label layoutX="372.0" layoutY="696.0" text="Born" />
+      <Circle fill="#656565" layoutX="350.0" layoutY="652.0" radius="5.0" stroke="#656565" strokeType="INSIDE" />
+      <Label layoutX="255.0" layoutY="644.0" text="August 2, 2001" />
+      <Label layoutX="370.0" layoutY="420.0" text="Diagnosed with General Anxiety Disorder" />
+      <VBox layoutX="195.0" layoutY="163.0" prefHeight="117.0" prefWidth="177.0" spacing="5.0">
+         <children>
+            <Label text="Patient #: 23-4536" />
+            <Label text="Health Card #: NH-234-4567" />
+            <Label text="Age: 28" />
+            <Label text="Sex: Female" />
+            <Label text="Pronouns: She/Her" />
+         </children>
+      </VBox>
+      <VBox layoutX="398.0" layoutY="163.0" prefHeight="117.0" prefWidth="151.0" spacing="5.0">
+         <children>
+            <Label text="Height: 5'4&quot;" />
+            <Label text="Weight: 52kgs" />
+            <Label text="BMI: 19.7" />
+            <Label text="Immunizations: up to date" />
+            <Label text="Allergies: Penicillin" />
+         </children>
+      </VBox>
+      <VBox layoutX="749.0" layoutY="163.0" prefHeight="117.0" prefWidth="151.0" spacing="5.0">
+         <children>
+            <Label text="Medications: Escitalopram, Remdesivir, Flovent Rotadisk, folic acid" wrapText="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="563.0" layoutY="163.0" prefHeight="117.0" prefWidth="164.0" spacing="5.0">
+         <children>
+            <Label text="DOB: March 22, 1995" />
+            <Label text="Phone #: 555-678-9090" />
+            <Label text="Email: pevans@nomail.com" />
+            <Label text="Address: 123 Church St., Toronto, ON" wrapText="true" />
+         </children>
+      </VBox>
+      <Button fx:id="logo" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoClickedAppt" prefHeight="66.0" prefWidth="66.0" styleClass="logo" stylesheets="@application.css" />
+   </children>
+</Pane>
