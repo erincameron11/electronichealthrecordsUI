@@ -4,19 +4,14 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 
-public class HCPHomeController {
+public class HCPLabResultsController {
 	
 	@FXML
 	public Pane rootPane;
-	public Text results;
 	
 	
-	// Methods for navigation pane
 	@FXML
 	public void medInfoClicked(ActionEvent event) throws IOException {
 		// Render the medical info page
@@ -33,13 +28,14 @@ public class HCPHomeController {
 	
 	@FXML
 	public void labResultsClicked(ActionEvent event) throws IOException {
-		// Render the lab results page
+		// Do nothing
 		ViewSwitcher.switchView(ViewEnum.HCPLAB);
+		
 	}
 	
 	@FXML
 	public void logoClicked(ActionEvent event) throws IOException {
-		// Do nothing
+		// Render the home page
 		ViewSwitcher.switchView(ViewEnum.HCPHOME);
 	}
 	

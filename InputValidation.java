@@ -38,4 +38,13 @@ public class InputValidation {
 		return false;
 	}
 	
+	
+	// EDIT OR REMOVE
+	public static void validateNumeric(TextField tf) {
+		// Check that the value is not empty
+		if(validateNotEmpty(tf)) {
+			// Do something
+		}
+    }
+	
 }

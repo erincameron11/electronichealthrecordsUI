@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LabResultsController">
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HCPLabResultsController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1e7fc" height="800.0" layoutX="-3.0" stroke="#ffffff00" strokeType="INSIDE" width="116.0" />
       <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="419.0" layoutY="26.0" text="LAB RESULTS" textFill="#2c2c2c" textOverrun="CLIP">
@@ -31,7 +31,7 @@
       <Label layoutX="490.0" layoutY="776.0" text="© EHR Inc., 2023" />
       <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoClicked" prefHeight="66.0" prefWidth="66.0" styleClass="logo" stylesheets="@application.css" />
       <Button layoutX="-1.0" layoutY="754.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Logout" />
-      <Text fill="#0096bf" layoutX="830.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as: Evans, P" />
+      <Text fill="#0096bf" layoutX="830.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as: HCP" />
       <Accordion layoutX="169.0" layoutY="158.0" prefHeight="571.0" prefWidth="777.0">
          <panes>
             <TitledPane fx:id="firstPane" animated="false" text="Dr. Gray     June 13, 2023     Beth Israel Clinic">
@@ -167,5 +167,6 @@
             </TitledPane>
          </panes>
       </Accordion>
+      <Button layoutX="-1.0" layoutY="691.0" mnemonicParsing="false" onAction="#patientLookupClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Patient Lookup" />
    </children>
 </Pane>

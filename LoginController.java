@@ -21,7 +21,6 @@ public class LoginController {
 	// Create fake logins for Health Care Professionals and Patients
 	private String healthCareProviderEmail = "hcp@email.com";
 	private String healthCareProviderPass = "admin123";
-	
 	private String patientEmail = "pat@email.com";
 	private String patientPass = "health456";
 	
@@ -39,7 +38,7 @@ public class LoginController {
 			// In this case we use mock emails/passwords to confirm info
 			if(username.equals(healthCareProviderEmail) && password.equals(healthCareProviderPass)) {
 				// Render the HCP home page
-				ViewSwitcher.switchView(ViewEnum.HCPHOME);
+				ViewSwitcher.switchView(ViewEnum.HCPSEARCH);
 			} else if(username.equals(patientEmail) && password.equals(patientPass)) {
 				// Render the patient home page
 				ViewSwitcher.switchView(ViewEnum.HOME);

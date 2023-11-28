@@ -1,34 +1,30 @@
 package application;
 
 import java.io.IOException;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 
-public class HCPHomeController {
+public class HCPAppointmentsController {
 	
 	@FXML
 	public Pane rootPane;
-	public Text results;
 	
-	
-	// Methods for navigation pane
 	@FXML
 	public void medInfoClicked(ActionEvent event) throws IOException {
 		// Render the medical info page
 		ViewSwitcher.switchView(ViewEnum.HCPMED);
-		
 	}
 	
 	@FXML
 	public void appointmentsClicked(ActionEvent event) throws IOException {
-		// Render the appointments page
+		// Do nothing
 		ViewSwitcher.switchView(ViewEnum.HCPAPPT);
-		
 	}
 	
 	@FXML
@@ -39,7 +35,7 @@ public class HCPHomeController {
 	
 	@FXML
 	public void logoClicked(ActionEvent event) throws IOException {
-		// Do nothing
+		// Render the home page
 		ViewSwitcher.switchView(ViewEnum.HCPHOME);
 	}
 	
