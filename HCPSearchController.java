@@ -18,6 +18,7 @@ public class HCPSearchController {
 		// Get info from text fields
 		
 		// Show results
+		results.setStyle("-fx-text-fill: #0096bf; -fx-background-color: white;");
 		results.setText("Evans, Patricia \t\t NH-234-4567 \t\t March 22, 1995");
 	}
 	
@@ -36,6 +37,12 @@ public class HCPSearchController {
 	
 	
 	// Methods for navigation pane
+	@FXML
+	public void homeClicked(ActionEvent event) throws IOException {
+		// Render the home page
+		ViewSwitcher.switchView(ViewEnum.HCPHOME);
+	}
+	
 	@FXML
 	public void medInfoClicked(ActionEvent event) throws IOException {
 		// Render the medical info page

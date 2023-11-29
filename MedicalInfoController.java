@@ -11,6 +11,11 @@ public class MedicalInfoController {
 	@FXML
 	public Pane rootPane;
 	
+	@FXML
+	public void homeClicked(ActionEvent event) throws IOException {
+		// Render the home page
+		ViewSwitcher.switchView(ViewEnum.HOME);
+	}
 	
 	@FXML
 	public void medInfoClicked(ActionEvent event) throws IOException {

@@ -120,6 +120,80 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="454.0" layoutX="24.0" layoutY="19.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),15, 0, 2, 2);" styleClass="widget" width="728.0" />
+                        <VBox layoutX="64.0" layoutY="46.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
+                           <children>
+                              <Label text="Intake:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Dr. Gray" />
+                              <Label text="September 29, 2022 @ 2:00pm" />
+                              <Label text="Beth Israel Clinic" />
+                              <Label text="Reason for visit: Sickness" />
+                              <Label text="Additional Notes: none" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="309.0" layoutY="46.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
+                           <children>
+                              <Label text="Biometrics:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="HR: 85bpm" />
+                              <Label text="SPO2: 95%" />
+                              <Label text="BP: 109/120" />
+                              <Label text="Pupil: equal and reactive" />
+                              <Label text="Skin: unremarkable" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="521.0" layoutY="46.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
+                           <children>
+                              <Label text="Patient Assessment:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Patient describes sore throat, fever, chills, and aches for the last 3 days. Symptoms worsening in the last 5 hours. Taken Tylenol, no relief. Negative COVID test x5 today." wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="61.0" layoutY="196.0" prefHeight="248.0" prefWidth="658.0" spacing="5.0">
+                           <children>
+                              <Label text="Doctor Assessment:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="70.0" prefWidth="658.0" text="Patient skin appears unremarkable. Patient has calm demeanour and appears to have low energy, slumped over in seat. Negative COVID test in doctors office. Patient has not been in contact with any positive cases of COVID, or any other respiratory illnesses. Appears fatigued." wrapText="true" />
+                              <Label text="Treatment:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="19.0" prefWidth="163.0" text="Lab requisition for blood test" wrapText="true" />
+                              <Label prefHeight="19.0" prefWidth="163.0" text="Bed rest for the next 2 days" wrapText="true" />
+                              <Label prefHeight="20.0" prefWidth="199.0" text="Tylenol 3's 2x per day 500mg max." wrapText="true" />
+                              <Label text="Follow up:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="199.0" text="Waiting on lab results" wrapText="true" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
             </content>
@@ -128,15 +202,95 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="454.0" layoutX="24.0" layoutY="19.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),15, 0, 2, 2);" styleClass="widget" width="728.0" />
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="454.0" layoutX="24.0" layoutY="14.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),15, 0, 2, 2);" styleClass="widget" width="728.0" />
+                        <VBox layoutX="64.0" layoutY="41.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
+                           <children>
+                              <Label text="Intake:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Dr. Hinton" />
+                              <Label text="February 2, 2020 @ 2:00pm" />
+                              <Label text="Beth Israel Clinic" />
+                              <Label text="Reason for visit: Sickness" />
+                              <Label text="Additional Notes: none" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="309.0" layoutY="41.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
+                           <children>
+                              <Label text="Biometrics:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="HR: 85bpm" />
+                              <Label text="SPO2: 95%" />
+                              <Label text="BP: 109/120" />
+                              <Label text="Pupil: equal and reactive" />
+                              <Label text="Skin: unremarkable" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="521.0" layoutY="41.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
+                           <children>
+                              <Label text="Patient Assessment:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Patient describes sore throat, fever, chills, and aches for the last 3 days. Symptoms worsening in the last 5 hours. Taken Tylenol, no relief. Negative COVID test x5 today." wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="61.0" layoutY="191.0" prefHeight="248.0" prefWidth="658.0" spacing="5.0">
+                           <children>
+                              <Label text="Doctor Assessment:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="70.0" prefWidth="658.0" text="Patient skin appears unremarkable. Patient has calm demeanour and appears to have low energy, slumped over in seat. Negative COVID test in doctors office. Patient has not been in contact with any positive cases of COVID, or any other respiratory illnesses. Appears fatigued." wrapText="true" />
+                              <Label text="Treatment:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="19.0" prefWidth="163.0" text="Lab requisition for blood test" wrapText="true" />
+                              <Label prefHeight="19.0" prefWidth="163.0" text="Bed rest for the next 2 days" wrapText="true" />
+                              <Label prefHeight="20.0" prefWidth="199.0" text="Tylenol 3's 2x per day 500mg max." wrapText="true" />
+                              <Label text="Follow up:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="199.0" text="Waiting on lab results" wrapText="true" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
             </content>
           </TitledPane>
         </panes>
       </Accordion>
-      <Button fx:id="createChart" layoutX="818.0" layoutY="108.0" mnemonicParsing="false" onAction="#createChartClicked" style="-fx-background-color: #d1e7fc; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Create Chart Entry" />
+      <Button fx:id="createChart" layoutX="818.0" layoutY="97.0" mnemonicParsing="false" onAction="#createChartClicked" prefHeight="37.0" prefWidth="118.0" text="New Chart" />
       <Text fill="#0096bf" layoutX="830.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as: HCP" />
       <Button layoutX="-1.0" layoutY="691.0" mnemonicParsing="false" onAction="#patientLookupClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Patient Lookup" />
+      <Button layoutX="-1.0" layoutY="203.0" mnemonicParsing="false" onAction="#homeClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Home" />
+      <Label layoutX="160.0" layoutY="116.0" text="PATIENT CHARTS">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

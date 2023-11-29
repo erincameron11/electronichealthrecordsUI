@@ -7,10 +7,16 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
 public class LabResultsController {
+	// NOTE: make sure Accordion has expandedPane="$firstPane" in FXML file
 	
 	@FXML
 	public Pane rootPane;
 	
+	@FXML
+	public void homeClicked(ActionEvent event) throws IOException {
+		// Render the home page
+		ViewSwitcher.switchView(ViewEnum.HOME);
+	}
 	
 	@FXML
 	public void medInfoClicked(ActionEvent event) throws IOException {

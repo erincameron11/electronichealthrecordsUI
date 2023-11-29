@@ -1,9 +1,6 @@
 package application;
 
 import java.io.IOException;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -21,24 +18,13 @@ public class AppointmentsController {
 	public TextArea notes;
 	public DatePicker datePicker;
 	public Button eleven;
+	public Button twelve;
 	public Button one;
+	public Button two;
+	public Button three;
+	public Button four;
 	public Button five;
 	public Button six;
-	
-	@FXML
-	public void visitReasonSelect(ActionEvent event) {
-		// Get selected item
-//		visitReason.setValue(visitReason.getSelectionModel().getSelectedItem().toString());
-	}
-	
-	@FXML
-	public void doctorSelect(ActionEvent event) {
-		System.out.print(visitReason);
-		// Display items in combo box
-//		doctorNames.setItems(doctors);
-//		doctorNames.setValue(doctorNames.getSelectionModel().getSelectedItem().toString());
-//		doctorNames.getSelectionModel().getSelectedItem().toString();
-	}
 	
 	
 	// Method for when a date is selected - mock example when Dec 16 is picked
@@ -65,22 +51,122 @@ public class AppointmentsController {
 		}
 	}
 	
+    @FXML
+    void oneClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: coral;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+    
+    @FXML
+    void twoClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: coral;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+
+    @FXML
+    void threeClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: coral;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+
+    @FXML
+    void fourClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: coral;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+	
+    @FXML
+    void fiveClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: coral;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+
+    @FXML
+    void sixClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: coral;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+
+    @FXML
+    void elevenClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: coral;");
+    	twelve.setStyle("-fx-background-color: #d1e7fc;");
+    }
+
+    @FXML
+    void twelveClicked(ActionEvent event) {
+    	one.setStyle("-fx-background-color: #d1e7fc;");
+    	two.setStyle("-fx-background-color: #d1e7fc;");
+    	three.setStyle("-fx-background-color: #d1e7fc;");
+    	four.setStyle("-fx-background-color: #d1e7fc;");
+    	five.setStyle("-fx-background-color: #d1e7fc;");
+    	six.setStyle("-fx-background-color: #d1e7fc;");
+    	eleven.setStyle("-fx-background-color: #d1e7fc;");
+    	twelve.setStyle("-fx-background-color: coral;");
+    }
+	
 	@FXML
-	public void clearAppointmentClicked(ActionEvent event) {
-		notes.setText(" ");
-		datePicker.getEditor().clear();
-//		doctorNames.getSelectionModel().clearSelection();
-//		visitReason.getSelectionModel().clearSelection();
+	public void clearAppointmentClicked(ActionEvent event) throws IOException {
+		// Re-load the page
+		ViewSwitcher.switchView(ViewEnum.APPT);
 	}
 	
 	@FXML
-	public void scheduleAppointmentClicked(ActionEvent event) {
-//		String note = notes.getText();
-//		String dateSelected = datePicker.getValue().toString();
-//		notes.clear();
-//		datePicker.cancelEdit();
-//		visitReason.cancelEdit();
-//		doctorNames.cancelEdit();
+	public void scheduleAppointmentClicked(ActionEvent event) throws IOException {
+		// Get the information entered
+		String note = notes.getText();
+		String dateSelected = datePicker.getValue().toString();
+		
+		// Re-load the page
+		ViewSwitcher.switchView(ViewEnum.APPT);
+	}
+	
+	@FXML
+	public void homeClicked(ActionEvent event) throws IOException {
+		// Render the home page
+		ViewSwitcher.switchView(ViewEnum.HOME);
 	}
 	
 	@FXML

@@ -20,6 +20,12 @@ public class HCPMedicalInfoController {
 	}
 	
 	@FXML
+	public void homeClicked(ActionEvent event) throws IOException {
+		// Render the home page
+		ViewSwitcher.switchView(ViewEnum.HCPHOME);
+	}
+	
+	@FXML
 	public void medInfoClicked(ActionEvent event) throws IOException {
 		// Do nothing
 		ViewSwitcher.switchView(ViewEnum.HCPMED);
