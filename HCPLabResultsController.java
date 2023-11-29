@@ -12,6 +12,11 @@ public class HCPLabResultsController {
 	public Pane rootPane;
 	
 	@FXML
+	public void createLabReqClicked(ActionEvent event) {
+		// A lab requisition form would populate
+	}
+	
+	@FXML
 	public void homeClicked(ActionEvent event) throws IOException {
 		// Render the home page
 		ViewSwitcher.switchView(ViewEnum.HCPHOME);

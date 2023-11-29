@@ -174,5 +174,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="createLabReq" layoutX="812.0" layoutY="107.0" mnemonicParsing="false" onAction="#createLabReqClicked" prefHeight="37.0" prefWidth="134.0" text="New Lab Requisition" />
    </children>
 </Pane>
