@@ -243,7 +243,15 @@
          <header>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="480.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="480.0" text="New Chart successfully submitted! Please click Continue below." />
+                  <Label text="Chart Submission Successful">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="51.0" prefWidth="480.0" text="New Chart successfully submitted! Please click Continue below." />
                </children>
             </AnchorPane>
          </header>
