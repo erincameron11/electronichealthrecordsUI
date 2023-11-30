@@ -2,6 +2,8 @@ package application;
 
 import java.util.regex.Pattern;
 
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class InputValidation {
@@ -11,6 +13,34 @@ public class InputValidation {
 			return false;
 		}
 		return true;
+	}
+	
+	public static boolean validateNotEmpty(TextArea ta) {
+		if(ta.getText().equals("")){
+			return false;
+		}
+		return true;
+	}
+	
+	public static boolean validateDatePicker(DatePicker dp) {
+		if(dp.getValue() != null) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean validateChart(TextField tf) {
+		if(validateNotEmpty(tf)){
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean validateChart(TextArea ta) {
+		if(validateNotEmpty(ta)){
+			return true;
+		}
+		return false;
 	}
 	
 	public static boolean validateEmail(TextField tf) {

@@ -10,6 +10,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
@@ -34,9 +35,9 @@
       <Label layoutX="490.0" layoutY="776.0" text="© EHR Inc., 2023" />
       <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoClicked" prefHeight="66.0" prefWidth="66.0" styleClass="logo" stylesheets="@application.css" />
       <Button layoutX="-1.0" layoutY="754.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Logout" />
-      <Accordion layoutX="159.0" layoutY="148.0" prefHeight="571.0" prefWidth="777.0">
+      <Accordion expandedPane="$firstPane" layoutX="159.0" layoutY="148.0" prefHeight="571.0" prefWidth="777.0">
         <panes>
-            <TitledPane fx:id="firstPane" animated="false" text="Dr. Gray     November 19, 2023     Beth Israel Clinic">
+            <TitledPane fx:id="firstPane" animated="false" text="Evans, Patricia      Dr. Gray     November 19, 2023     Beth Israel Clinic">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -62,71 +63,183 @@
                                     <Font name="System Bold" size="13.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="hr" promptText="Heart Rate">
-                                 <tooltip>
-                                    <Tooltip fx:id="hrTooltip" text="Enter HR in format: 70" />
-                                 </tooltip></TextField>
-                              <TextField fx:id="spo2" promptText="SPO2">
-                                 <tooltip>
-                                    <Tooltip fx:id="spo2Tooltip" text="Enter SPO2 in format: 95%" />
-                                 </tooltip></TextField>
-                              <TextField fx:id="bp" promptText="Blood Pressure">
-                                 <tooltip>
-                                    <Tooltip fx:id="bpTooltip" text="Enter BP in format: 120/90" />
-                                 </tooltip></TextField>
-                              <TextField promptText="Pupils" />
-                              <TextField promptText="Skin Condition" />
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="21.0" text="HR:" />
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="hr" prefHeight="26.0" prefWidth="143.0" promptText="##">
+                                       <tooltip>
+                                          <Tooltip fx:id="hrTooltip" text="Enter HR in format: 70" />
+                                       </tooltip>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="36.0" text="SPO2:" />
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="spo2" prefHeight="26.0" prefWidth="143.0" promptText="##%">
+                                       <tooltip>
+                                          <Tooltip fx:id="spo2Tooltip" text="Enter SPO2 in format: 95%" />
+                                       </tooltip>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="22.0" text="BP:" />
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="bp" prefHeight="26.0" prefWidth="143.0" promptText="###/###">
+                                       <tooltip>
+                                          <Tooltip fx:id="bpTooltip" text="Enter BP in format: 120/90" />
+                                       </tooltip>
+                                       <HBox.margin>
+                                          <Insets left="18.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Pupils:" />
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="pupils" prefHeight="26.0" prefWidth="143.0" promptText="Pupils">
+                                       <HBox.margin>
+                                          <Insets left="4.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="29.0" text="Skin:" />
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="skin" prefHeight="26.0" prefWidth="144.0" promptText="Skin Condition">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
                            </children>
                         </VBox>
                         <VBox layoutX="521.0" layoutY="46.0" prefHeight="138.0" prefWidth="189.0" spacing="5.0">
                            <children>
-                              <Label text="Patient Assessment:">
-                                 <font>
-                                    <Font name="System Bold" size="13.0" />
-                                 </font>
-                              </Label>
-                              <TextArea prefHeight="200.0" prefWidth="200.0" />
+                              <HBox>
+                                 <children>
+                                    <Label text="Patient Assessment:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="patientAssessment" prefHeight="200.0" prefWidth="200.0" />
                            </children>
                         </VBox>
                         <VBox layoutX="61.0" layoutY="216.0" prefHeight="215.0" prefWidth="658.0" spacing="5.0">
                            <children>
-                              <Label text="Doctor Assessment:">
-                                 <font>
-                                    <Font name="System Bold" size="13.0" />
-                                 </font>
-                              </Label>
-                              <TextArea prefHeight="27.0" prefWidth="658.0" />
-                              <Label text="Treatment:">
-                                 <font>
-                                    <Font name="System Bold" size="13.0" />
-                                 </font>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </Label>
-                              <TextArea prefHeight="25.0" prefWidth="658.0" />
-                              <Label text="Follow up:">
-                                 <font>
-                                    <Font name="System Bold" size="13.0" />
-                                 </font>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </Label>
-                              <TextArea prefHeight="200.0" prefWidth="200.0" />
+                              <HBox>
+                                 <children>
+                                    <Label text="Doctor Assessment:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="doctorAssessment" prefHeight="27.0" prefWidth="658.0" />
+                              <HBox>
+                                 <children>
+                                    <Label text="Treatment:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="treatment" prefHeight="25.0" prefWidth="658.0" />
+                              <HBox>
+                                 <children>
+                                    <Label text="Follow up:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="*" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="followUp" prefHeight="200.0" prefWidth="200.0" />
                            </children>
                         </VBox>
                      </children>
                   </AnchorPane>
                </content>
             </TitledPane>
-          <TitledPane animated="false" text="Dr. Gray     June 13, 2023     Beth Israel Clinic">
+          <TitledPane animated="false" text="Evans, Patricia      Dr. Gray     June 13, 2023     Beth Israel Clinic">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -209,7 +322,7 @@
                   </AnchorPane>
             </content>
           </TitledPane>
-          <TitledPane animated="false" expanded="false" text="Dr. Gray      September 29, 2022     Beth Israel Clinic">
+          <TitledPane animated="false" expanded="false" text="Evans, Patricia      Dr. Gray      September 29, 2022     Beth Israel Clinic">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -218,7 +331,7 @@
                   </AnchorPane>
             </content>
           </TitledPane>
-          <TitledPane animated="false" expanded="false" text="Dr. Hinton     February 2, 2020     Beth Israel Clinic">
+          <TitledPane animated="false" expanded="false" text="Evans, Patricia      Dr. Hinton     February 2, 2020     Beth Israel Clinic">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

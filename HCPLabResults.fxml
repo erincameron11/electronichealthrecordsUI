@@ -34,7 +34,7 @@
       <Text fill="#0096bf" layoutX="830.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as: HCP" />
       <Accordion expandedPane="$firstPane" layoutX="169.0" layoutY="158.0" prefHeight="571.0" prefWidth="777.0">
          <panes>
-            <TitledPane fx:id="firstPane" animated="false" text="Dr. Gray     June 13, 2023     Beth Israel Clinic">
+            <TitledPane fx:id="firstPane" animated="false" text="Evans, Patricia      Dr. Gray     June 13, 2023     Beth Israel Clinic">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

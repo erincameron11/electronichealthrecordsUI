@@ -53,7 +53,16 @@
                   <Insets bottom="20.0" />
                </padding>
             </Label>
-            <Label text="Select all required tests:" />
+            <HBox>
+               <children>
+                  <Label text="Select all required tests:" />
+                  <Label text="*" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
             <HBox spacing="200.0">
                <children>
                   <CheckBox fx:id="ne" mnemonicParsing="false" text="NE%">
@@ -202,7 +211,7 @@
       </VBox>
       <Button fx:id="cancelLabReq" layoutX="659.0" layoutY="540.0" mnemonicParsing="false" onAction="#cancelLabReqClicked" prefHeight="37.0" prefWidth="99.0" text="Cancel" />
       <Button fx:id="submitLabReq" layoutX="799.0" layoutY="540.0" mnemonicParsing="false" onAction="#submitLabReqClicked" prefHeight="37.0" prefWidth="100.0" text="Submit" />
-      <DialogPane fx:id="labDialog" layoutX="320.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="188.0" prefWidth="480.0" style="-fx-background-color: #d1e7fc; -fx-border-color: gray; -fx-border-width: 2;">
+      <DialogPane fx:id="labDialog" layoutX="320.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="188.0" prefWidth="480.0" style="-fx-background-color: #d1e7fc; -fx-border-color: gray; -fx-border-width: 2;" visible="false">
           <header>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="480.0">
                <children>

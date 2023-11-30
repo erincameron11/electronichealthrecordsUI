@@ -37,7 +37,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Accordion layoutX="168.0" layoutY="148.0" prefHeight="571.0" prefWidth="777.0">
+      <Accordion expandedPane="$firstPane" layoutX="168.0" layoutY="148.0" prefHeight="571.0" prefWidth="777.0">
          <panes>
             <TitledPane fx:id="firstPane" animated="false" text="Dr. Gray     June 13, 2023     Beth Israel Clinic">
                <content>

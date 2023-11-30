@@ -43,12 +43,6 @@ public class LabResultsController {
 	}
 	
 	@FXML
-	public void patientLookupClicked(ActionEvent event) throws IOException {
-		// Render the patients profile
-		ViewSwitcher.switchView(ViewEnum.HCPSEARCH);
-	}
-	
-	@FXML
 	public void logoutClicked(ActionEvent event) throws IOException {
 		// Render the login page
 		ViewSwitcher.switchView(ViewEnum.LOGIN);

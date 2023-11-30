@@ -4,8 +4,11 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class HCPSearchController {
@@ -15,9 +18,57 @@ public class HCPSearchController {
 	public Button results;
 	public TextField healthcard;
 	public Text healthcardText;
+	public VBox hasHealthcardBox;
+	public VBox doesNotHaveHealthcardBox;
+	public RadioButton hasHealthcard;
+	public RadioButton doesNotHaveHealthcard;
+	public Button search;
+	public TextField firstname;
+	public TextField lastname;
+	public DatePicker dob;
 	
 	private boolean healthcardValid = true;
+	private boolean firstnameValid = true;
+	private boolean lastnameValid = true;
+	private boolean dobValid = true;
 	
+	@FXML
+	public void hasHealthcardClicked(ActionEvent event) {
+		// Clear styling on no healthcard fields
+		firstname.setStyle(null);
+		firstname.setText(" ");
+		lastname.setStyle(null);
+		lastname.setText(" ");
+		dob.setStyle(null);
+		
+		
+		// Unselect the no healthcard radio option
+		doesNotHaveHealthcard.setSelected(false);
+		
+		// Make the healthcard option type-able, and no healthcard disabled
+		hasHealthcardBox.setDisable(false);
+		doesNotHaveHealthcardBox.setDisable(true);
+		
+		// Set search to click-able
+		search.setDisable(false);
+	}
+	
+	@FXML
+	public void doesNotHaveHealthcardClicked(ActionEvent event) {
+		// Clear styling on healthcard field
+		healthcard.setStyle(null);
+		healthcardText.setText(" ");
+		
+		// Unselect the healthcard radio option
+		hasHealthcard.setSelected(false);
+		
+		// Make the no healthcard option type-able
+		doesNotHaveHealthcardBox.setDisable(false);
+		hasHealthcardBox.setDisable(true);
+		
+		// Set search to click-able
+		search.setDisable(false);
+	}
 	
 	@FXML
 	public void searchClicked(ActionEvent event) {
@@ -28,11 +79,18 @@ public class HCPSearchController {
 		String hc = healthcard.getText();
 
 		// If the health card is valid, reset styling and show results
-		if(healthcardValid) {
+		if(hasHealthcard.isSelected() && healthcardValid) {
 			// Show results
 			results.setDisable(false);
 			results.setStyle("-fx-text-fill: #0096bf; -fx-background-color: white;");
 			results.setText("Evans, Patricia \t\t NH-234-4567 \t\t March 22, 1995");
+		} else if(doesNotHaveHealthcard.isSelected() && firstnameValid && lastnameValid && dobValid) {
+			// Show results
+			results.setDisable(false);
+			results.setStyle("-fx-text-fill: #0096bf; -fx-background-color: white;");
+			results.setText("Evans, Patricia \t\t NH-234-4567 \t\t March 22, 1995");
+		} else {
+			// do nothing
 		}
 	}
 	
@@ -91,16 +149,49 @@ public class HCPSearchController {
 	
 	// Method: check that all required fields are filled out
     public void checkRequiredFields() {
-    	// Check healthcard
-        if(!InputValidation.validateHealthCard(healthcard)) {
-        	healthcard.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
-        	healthcardText.setText("Enter a valid healthcard");
-            healthcardValid = false;
-        } else {
-        	healthcard.setStyle(null);
-        	healthcardText.setText(" ");
-        	healthcardValid = true;
-        }
+    	// If healthcard selected
+    	if(hasHealthcard.isSelected()) {
+	    	// Check healthcard
+	        if(!InputValidation.validateHealthCard(healthcard)) {
+	        	healthcard.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+	        	healthcardText.setText("Enter a valid healthcard");
+	            healthcardValid = false;
+	        } else {
+	        	healthcard.setStyle(null);
+	        	healthcardText.setText(" ");
+	        	healthcardValid = true;
+	        }
+	    
+	    // If no healthcard selected
+    	} else {
+    		// Check first name
+    		if(!InputValidation.validateNotEmpty(firstname)) {
+    			firstname.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+    			firstnameValid = false;
+    		} else {
+    			firstname.setStyle(null);
+    			firstnameValid = true;
+    		}
+    		
+    		// Check last name
+    		if(!InputValidation.validateNotEmpty(lastname)) {
+    			lastname.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+    			lastnameValid = false;
+    		} else {
+    			lastname.setStyle(null);
+    			lastnameValid = true;
+    		}
+    		
+    		// Check dob
+    		if(!InputValidation.validateDatePicker(dob)) {
+    			dob.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+    			dobValid = false;
+    		} else {
+    			dob.setStyle(null);
+    			dobValid = true;
+    		}
+    			
+    	}
     }
 	
 }

@@ -2,9 +2,7 @@ package application;
 
 public enum PermissionEnum {
 	PATIENT("Patient"),
-	HCP("HealthCarePractitioner"),
-	ADMIN("Admin"),
-	SUPER_ADMIN("SuperAdmin");
+	HCP("HealthCarePractitioner");
 	
 	private String permission;
 

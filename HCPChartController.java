@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
@@ -17,19 +18,32 @@ public class HCPChartController {
 	public TextField hr;
 	public TextField spo2;
 	public TextField bp;
+	public TextField skin;
+	public TextField pupils;
+	public TextArea patientAssessment;
+	public TextArea doctorAssessment;
+	public TextArea treatment;
+	public TextArea followUp;
 	public DialogPane chartDialog;
 	
 	private boolean hrValid = true;
 	private boolean spo2Valid = true;
 	private boolean bpValid = true;
+	private boolean skinValid = true;
+	private boolean pupilsValid = true;
+	private boolean patientAssessmentValid = true;
+	private boolean doctorAssessmentValid = true;
+	private boolean followUpValid = true;
+	private boolean treatmentValid = true;
 	
 	@FXML
 	public void submitChartClicked(ActionEvent event) throws IOException {
 		// Check that all required fields are filled out
 	    checkRequiredFields();
 		
-		// If HR, SPO2, and BP valid display the dialog box
-	    if(hrValid && spo2Valid && bpValid) {
+		// If all fields valid display the dialog box
+	    if(hrValid && spo2Valid && bpValid && skinValid && pupilsValid && patientAssessmentValid
+	    	&& doctorAssessmentValid && followUpValid && treatmentValid) {
 	    	chartDialog.setVisible(true);
 	    }
 	}
@@ -118,6 +132,60 @@ public class HCPChartController {
         } else {
         	bp.setStyle(null);
         	bpValid = true;
+        }
+        
+        // Check skin
+        if(!InputValidation.validateChart(skin)) {
+        	skin.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	skinValid = false;
+        } else {
+        	skin.setStyle(null);
+        	skinValid = true;
+        }
+        
+        // Check pupils
+        if(!InputValidation.validateChart(pupils)) {
+        	pupils.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	pupilsValid = false;
+        } else {
+        	pupils.setStyle(null);
+        	pupilsValid = true;
+        }
+        
+        // Check patientAssessment
+        if(!InputValidation.validateChart(patientAssessment)) {
+        	patientAssessment.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	patientAssessmentValid = false;
+        } else {
+        	patientAssessment.setStyle(null);
+        	patientAssessmentValid = true;
+        }
+        
+        // Check doctorAssessment
+        if(!InputValidation.validateChart(doctorAssessment)) {
+        	doctorAssessment.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	doctorAssessmentValid = false;
+        } else {
+        	doctorAssessment.setStyle(null);
+        	doctorAssessmentValid = true;
+        }
+        
+        // Check treatment
+        if(!InputValidation.validateChart(treatment)) {
+        	treatment.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	treatmentValid = false;
+        } else {
+        	treatment.setStyle(null);
+        	treatmentValid = true;
+        }
+        
+        // Check followUp
+        if(!InputValidation.validateChart(followUp)) {
+        	followUp.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	followUpValid = false;
+        } else {
+        	followUp.setStyle(null);
+        	followUpValid = true;
         }
     }
 	
