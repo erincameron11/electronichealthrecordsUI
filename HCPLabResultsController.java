@@ -12,8 +12,9 @@ public class HCPLabResultsController {
 	public Pane rootPane;
 	
 	@FXML
-	public void createLabReqClicked(ActionEvent event) {
-		// A lab requisition form would populate
+	public void createLabReqClicked(ActionEvent event) throws IOException {
+		// Render the lab req page
+		ViewSwitcher.switchView(ViewEnum.HCPLABREQ);
 	}
 	
 	@FXML

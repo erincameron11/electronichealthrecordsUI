@@ -4,22 +4,36 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 public class HCPSearchController {
 	
 	@FXML
 	public Pane rootPane;
 	public Button results;
+	public TextField healthcard;
+	public Text healthcardText;
+	
+	private boolean healthcardValid = true;
 	
 	
 	@FXML
 	public void searchClicked(ActionEvent event) {
-		// Get info from text fields
+		// Check that fields are filled and validated input
+		checkRequiredFields();
 		
-		// Show results
-		results.setStyle("-fx-text-fill: #0096bf; -fx-background-color: white;");
-		results.setText("Evans, Patricia \t\t NH-234-4567 \t\t March 22, 1995");
+		// Get info from text fields
+		String hc = healthcard.getText();
+
+		// If the health card is valid, reset styling and show results
+		if(healthcardValid) {
+			// Show results
+			results.setDisable(false);
+			results.setStyle("-fx-text-fill: #0096bf; -fx-background-color: white;");
+			results.setText("Evans, Patricia \t\t NH-234-4567 \t\t March 22, 1995");
+		}
 	}
 	
 	@FXML
@@ -74,5 +88,19 @@ public class HCPSearchController {
 		// Render the login page
 		ViewSwitcher.switchView(ViewEnum.LOGIN);
 	}
+	
+	// Method: check that all required fields are filled out
+    public void checkRequiredFields() {
+    	// Check healthcard
+        if(!InputValidation.validateHealthCard(healthcard)) {
+        	healthcard.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	healthcardText.setText("Enter a valid healthcard");
+            healthcardValid = false;
+        } else {
+        	healthcard.setStyle(null);
+        	healthcardText.setText(" ");
+        	healthcardValid = true;
+        }
+    }
 	
 }

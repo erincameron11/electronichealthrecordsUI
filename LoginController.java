@@ -4,9 +4,17 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.OverrunStyle;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
 
 public class LoginController {
 	
@@ -14,6 +22,9 @@ public class LoginController {
 	public Pane rootPane;
 	public TextField email;
 	public PasswordField pass;
+	public Button emailValidateButton;
+	public Text emailValidateText;
+	public Text passValidateText;
 	
 	private boolean emailValid = true;
     private boolean passValid = true;
@@ -47,6 +58,9 @@ public class LoginController {
 	            emailValid = false;
 				pass.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
 	            passValid = false;
+	            
+	            emailValidateText.setText("Enter a valid email address");
+	            passValidateText.setText("Enter a valid password");
 			}
 		}
 	}
@@ -63,18 +77,22 @@ public class LoginController {
     	// Check email
         if(!InputValidation.validateEmail(email)) {
         	email.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+        	emailValidateText.setText("Enter a valid email address");
             emailValid = false;
         } else {
         	email.setStyle(null);
+        	emailValidateText.setText("");
             emailValid = true;
         }
 
         // Check password
         if(!InputValidation.validatePassword(pass)) {
             pass.setStyle("-fx-text-box-border: red ;-fx-focus-color: red ;-fx-control-inner-background: #fabdb9");
+            passValidateText.setText("Enter a valid password");
             passValid = false;
         } else {
             pass.setStyle(null);
+            passValidateText.setText("");
             passValid = true;
         }
     }

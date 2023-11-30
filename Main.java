@@ -20,7 +20,7 @@ public class Main extends Application {
 			// Create a scene, set the scene, and load the login page
 			Scene scene = new Scene(new Pane());
 			ViewSwitcher.setScene(scene);
-			ViewSwitcher.switchView(ViewEnum.HCPCHART);
+			ViewSwitcher.switchView(ViewEnum.LOGIN);
 			
 			primaryStage.setScene(scene);
 			primaryStage.show();

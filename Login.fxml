@@ -6,11 +6,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
@@ -30,14 +33,41 @@
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets bottom="20.0" />
+                  <Insets />
                </VBox.margin>
+               <tooltip>
+                  <Tooltip fx:id="emailTip" text="Please enter your email in the following format: xxx@xxx.xxx" />
+               </tooltip>
             </TextField>
-            <Label text="Password:" />
-            <PasswordField fx:id="pass" />
+            <HBox>
+               <children>
+                  <Text fx:id="emailValidateText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Label text="Password:">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></Label>
+            <PasswordField fx:id="pass">
+               <tooltip>
+                  <Tooltip fx:id="passTip" text="Please enter your password" />
+               </tooltip></PasswordField>
+            <HBox>
+               <children>
+                  <Text fx:id="passValidateText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0">
+	                  <font>
+	                        <Font size="11.0" />
+	                  </font>
+                  </Text>
+               </children>
+            </HBox>
             <Hyperlink onAction="#forgotPassClicked" text="Forgot password?">
                <padding>
-                  <Insets bottom="40.0" />
+                  <Insets bottom="40.0" top="10.0" />
                </padding>
             </Hyperlink>
             <Button fx:id="login" mnemonicParsing="false" onAction="#loginClicked" text="LOGIN">
@@ -47,8 +77,8 @@
             </Button>
          </children>
       </VBox>
-      <Circle fill="#fa6e6e" layoutX="65.0" layoutY="57.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="56.0" layoutY="35.0" stroke="#ffffff00" strokeType="INSIDE" width="19.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="44.0" layoutY="48.0" stroke="#ffffff00" strokeType="INSIDE" width="44.0" />
+      <Circle fill="#fa6e6e" layoutX="55.0" layoutY="47.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="46.0" layoutY="25.0" stroke="#ffffff00" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="34.0" layoutY="38.0" stroke="#ffffff00" strokeType="INSIDE" width="44.0" />
    </children>
 </Pane>

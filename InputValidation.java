@@ -38,13 +38,33 @@ public class InputValidation {
 		return false;
 	}
 	
-	
-	// EDIT OR REMOVE
-	public static void validateNumeric(TextField tf) {
-		// Check that the value is not empty
-		if(validateNotEmpty(tf)) {
-			// Do something
-		}
+	public static boolean validateHR(TextField tf) {
+		String hr = tf.getText();
+		String regexPattern = "^\\d{2,3}$";
+		
+		return Pattern.compile(regexPattern).matcher(hr).matches();
     }
+	
+	public static boolean validateSPO2(TextField tf) {
+		String spo2 = tf.getText();
+		String regexPattern = "^(\\d{1,3})%$";
+		
+		return Pattern.compile(regexPattern).matcher(spo2).matches();
+    }
+	
+	public static boolean validateBP(TextField tf) {
+		String bp = tf.getText();
+		String regexPattern = "^\\d{2,3}/\\d{2,3}$";
+		
+		return Pattern.compile(regexPattern).matcher(bp).matches();
+    }
+	
+	public static boolean validateHealthCard(TextField tf) {
+		// Check in the form XX-111-2222
+		String healthcard = tf.getText();
+		String regexPattern = "^[A-Z]{2}-\\d{3}-\\d{4}$";
+		
+		return Pattern.compile(regexPattern).matcher(healthcard).matches();
+	}
 	
 }

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 
@@ -25,6 +26,7 @@ public class AppointmentsController {
 	public Button four;
 	public Button five;
 	public Button six;
+	public DialogPane apptDialog;
 	
 	
 	// Method for when a date is selected - mock example when Dec 16 is picked
@@ -155,11 +157,13 @@ public class AppointmentsController {
 	
 	@FXML
 	public void scheduleAppointmentClicked(ActionEvent event) throws IOException {
-		// Get the information entered
-		String note = notes.getText();
-		String dateSelected = datePicker.getValue().toString();
-		
-		// Re-load the page
+		// Display the dialog box
+		apptDialog.setVisible(true);
+	}
+	
+	@FXML
+	public void continueClicked(ActionEvent event) throws IOException {
+		// Render Lab results page
 		ViewSwitcher.switchView(ViewEnum.APPT);
 	}
 	

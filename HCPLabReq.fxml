@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HCPLabReqController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1e7fc" height="800.0" layoutX="-3.0" stroke="#ffffff00" strokeType="INSIDE" width="116.0" />
+      <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="419.0" layoutY="26.0" text="LAB REQUISITION" textFill="#2c2c2c" textOverrun="CLIP">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Circle fill="#fa6e6e" layoutX="55.0" layoutY="47.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="46.0" layoutY="25.0" stroke="#ffffff00" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="19.0" layoutX="34.0" layoutY="38.0" stroke="#ffffff00" strokeType="INSIDE" width="44.0" />
+      <Button layoutX="-1.0" layoutY="263.0" mnemonicParsing="false" onAction="#medInfoClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Medical Info" />
+      <Button layoutX="-1.0" layoutY="325.0" mnemonicParsing="false" onAction="#appointmentsClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Appointments" />
+      <Button layoutX="-1.0" layoutY="387.0" mnemonicParsing="false" onAction="#labResultsClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #e6e6e6; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Lab Results" />
+      <Label layoutX="490.0" layoutY="776.0" text="© EHR Inc., 2023" />
+      <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoClicked" prefHeight="66.0" prefWidth="66.0" styleClass="logo" stylesheets="@application.css" />
+      <Button layoutX="-1.0" layoutY="754.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Logout" />
+      <Text fill="#0096bf" layoutX="830.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as: HCP" />
+      <Button layoutX="-1.0" layoutY="691.0" mnemonicParsing="false" onAction="#patientLookupClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Patient Lookup" />
+      <Button layoutX="-1.0" layoutY="203.0" mnemonicParsing="false" onAction="#homeClicked" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, #656565, 10, 0, 3, 3);" text="Home" />
+      <Label layoutX="170.0" layoutY="126.0" text="NEW LAB REQUISITION">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="454.0" layoutX="169.0" layoutY="160.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),15, 0, 2, 2);" styleClass="widget" width="779.0" />
+      <VBox layoutX="222.0" layoutY="195.0" prefHeight="309.0" prefWidth="658.0" spacing="5.0">
+         <children>
+            <Label text="Lab Requisition:" underline="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Date: November 19, 2023" />
+            <Label text="Patient: Evans, Patricia">
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </Label>
+            <Label text="Select all required tests:" />
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="ne" mnemonicParsing="false" text="NE%">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="wbc" mnemonicParsing="false" text="WBC">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="ly" mnemonicParsing="false" text="LY%">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="rbc" mnemonicParsing="false" text="RBC">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="mo" mnemonicParsing="false" text="MO%">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="hepc" mnemonicParsing="false" text="Hep C" />
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="ba" mnemonicParsing="false" text="BA%">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="hepa" mnemonicParsing="false" text="Hep A">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="eo" mnemonicParsing="false" text="EO%">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="hepb" mnemonicParsing="false" text="Hep B">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="iga" mnemonicParsing="false" text="IgA">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="igi" mnemonicParsing="false" text="IgI">
+                     <padding>
+                        <Insets left="14.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="ige" mnemonicParsing="false" text="IgE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="glucose" mnemonicParsing="false" text="Glocose">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="200.0">
+               <children>
+                  <CheckBox fx:id="igg" mnemonicParsing="false" text="IgG">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="creatine" mnemonicParsing="false" text="Creatine">
+                     <padding>
+                        <Insets left="13.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text fx:id="selectOption" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="cancelLabReq" layoutX="659.0" layoutY="540.0" mnemonicParsing="false" onAction="#cancelLabReqClicked" prefHeight="37.0" prefWidth="99.0" text="Cancel" />
+      <Button fx:id="submitLabReq" layoutX="799.0" layoutY="540.0" mnemonicParsing="false" onAction="#submitLabReqClicked" prefHeight="37.0" prefWidth="100.0" text="Submit" />
+      <DialogPane fx:id="labDialog" layoutX="320.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="188.0" prefWidth="480.0" style="-fx-background-color: #d1e7fc; -fx-border-color: gray; -fx-border-width: 2;" visible="false">
+          <header>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="480.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="480.0" text="Lab Requisition successfully submitted! Please click Continue below." />
+               </children>
+            </AnchorPane>
+          </header>
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
+               <children>
+                  <Button layoutX="207.0" layoutY="25.0" mnemonicParsing="false" onAction="#continueClicked" prefHeight="37.0" text="Continue" />
+               </children>
+            </AnchorPane>
+          </content>
+          <expandableContent>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+          </expandableContent>
+      </DialogPane>
+   </children>
+</Pane>

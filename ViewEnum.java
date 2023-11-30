@@ -13,7 +13,8 @@ public enum ViewEnum {
 	HCPMED("HCPMedicalInfo.fxml"),
 	HCPCHART("HCPChart.fxml"),
 	HCPAPPT("HCPAppointments.fxml"),
-	HCPLAB("HCPLabResults.fxml");
+	HCPLAB("HCPLabResults.fxml"),
+	HCPLABREQ("HCPLabReq.fxml");
 	
 	// Define variable
 	private String filename;
