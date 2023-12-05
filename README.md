@@ -50,10 +50,10 @@ Some further fundamental design considerations were made outside of the recommen
 
 ## Technologies
 This application was built with the following technology
-* JavaFX
+* JavaFX (version 21.0.1)
 * FXML
-* Java
-* Eclipse IDE.  
+* Java (version 20.0.2)
+* Eclipse IDE (version 4.29.0)  
   
 
 ## Login
