@@ -7,7 +7,7 @@
 
 
 ## Introduction
-An Electronic Health Records (EHR) application provides a secure portal for both Patients and Health Care Providers (HCP) to access confidential health records and medical information. The aim of this project was to design a simplified UI of the application for faster turnaround. 
+An Electronic Health Records (EHR) application provides a secure portal for both Patients and Health Care Providers (HCP) to access confidential health records and medical information. The aim of this project is to design a simplified UI of the application for faster turnaround. 
 
 ## Assumptions
 Below I discuss Assumptions to aid in defining the project scope that apply to both the minimum viable product as well as a full system design for future development:
@@ -26,7 +26,7 @@ Below I discuss Assumptions to aid in defining the project scope that apply to b
 The modules are divided into a split hierarchy based on what Permissions the User has. If the user has Health Care Practitioner (HCP) Permissions, they follow the left arm of the hierarchy tree, and if the user has PATIENT Permissions, they follow the right arm of the hierarchy tree (Figure 1). I designed the application to follow a two-pronged hierarchical approach to allow for scalability of the application. In addition to this, both the Patient and HCP views share a nearly identical structure, promoting reusability, with the inclusion or exclusion of specific functionalities based on the user's permissions. Modules include: Login, Forgot password, Home, HCP Home, HCP Search, Medical Information, HCP Medical Information, HCP New Chart, Appointments, HCP Appointments, Lab Results, HCP Lab Results, and HCP Lab Requisition pages.
 
 ## HCI Fundamentals
-The HCI Fundamentals of the design are described below. The interface was designed based on the 8 Golden Rules of Interface Design, and can be seen through the following examples (Shneiderman, 2016, p.95-97):
+The HCI Fundamentals of the design are described below. The interface was designed based on the 8 Golden Rules of Interface Design, and can be seen through the following examples:
 * Strive for consistency – All fonts, buttons, colours, layouts, navigation, verbiage, actions, and dissemination of information throughout the application is consistent.
 * Universal usability – The design is intended to be deployed worldwide, for users of all ages, abilities, and different technologies as it is a very simple interface with basic features that enable users to understand the content immediately.
 * Offer informative feedback – When a user enters incorrect information during login, the system offers feedback by displaying red text, and guiding the user to input correct information.
@@ -54,15 +54,15 @@ This application was built with the following technology
 Below are instructions for how to run the application:
 1. Clone this repository by typing the command into a Terminal window: 'git clone <repo_name>'
 2. Navigate to the new folder in the Terminal
-3. Enter the command: 'javac Main.java' in the Teminal and wait. This may take a few seconds to process.
-4. Enter the command: 'java Main.java' in the Terminal. The application should now be up and running.
+3. Enter the command: `javac Main.java` in the Teminal and wait. This may take a few seconds to process.
+4. Enter the command: `java Main.java` in the Terminal. The application should now be up and running.
 
 ## Login
 Login information for both a Patient and HCP user are below:
 Patient:
-'Email address: pat@email.com'
-'Password: health456'
+`Email address: pat@email.com`
+`Password: health456`
 
 HCP:
-'Email address: hcp@email.com'
-'Password: admin123'
+`Email address: hcp@email.com`
+`Password: admin123`
