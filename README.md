@@ -52,7 +52,7 @@ This application was built with the following technology
 
 ## Run
 Below are instructions for how to run the application:
-1. Clone this repository by typing the command into a Terminal window: 'git clone <repo_name>'
+1. Clone this repository by typing the command into a Terminal window: `git clone <repo_name>`
 2. Navigate to the new folder in the Terminal
 3. Enter the command: `javac Main.java` in the Teminal and wait. This may take a few seconds to process.
 4. Enter the command: `java Main.java` in the Terminal. The application should now be up and running.
