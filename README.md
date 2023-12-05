@@ -6,8 +6,10 @@
 
 
 
+
 ## Introduction
-An Electronic Health Records (EHR) application provides a secure portal for both Patients and Health Care Providers (HCP) to access confidential health records and medical information. The aim of this project is to design a simplified UI of the application for faster turnaround. 
+An Electronic Health Records (EHR) application provides a secure portal for both Patients and Health Care Providers (HCP) to access confidential health records and medical information. The aim of this project is to design a simplified UI of the application for faster turnaround.    
+
 
 ## Assumptions
 Below I discuss Assumptions to aid in defining the project scope that apply to both the minimum viable product as well as a full system design for future development:
@@ -20,10 +22,12 @@ Below I discuss Assumptions to aid in defining the project scope that apply to b
 * A HCP user should be able to perform Create, Read, Update, Delete (CRUD) operations throughout the application, such as:
   * Search for patients in the database, read the Patient Overview page including the patient synopsis and medical history sections, read upcoming Appointments, read Medical Information previous doctor visit notes (but not able to delete notes), read Lab Results, and create a Lab Requisition.
 * A Patient should be able to perform CRUD operations within the application, such as:
-  * Read the Patient Overview page including the patient synopsis and medical history sections, read upcoming appointments, create a new appointment, read Medical Information previous visit doctor notes, and read Lab Results.
+  * Read the Patient Overview page including the patient synopsis and medical history sections, read upcoming appointments, create a new appointment, read Medical Information previous visit doctor notes, and read Lab Results.   
+
 
 ## Modules
-The modules are divided into a split hierarchy based on what Permissions the User has. If the user has Health Care Practitioner (HCP) Permissions, they follow the left arm of the hierarchy tree, and if the user has PATIENT Permissions, they follow the right arm of the hierarchy tree (Figure 1). I designed the application to follow a two-pronged hierarchical approach to allow for scalability of the application. In addition to this, both the Patient and HCP views share a nearly identical structure, promoting reusability, with the inclusion or exclusion of specific functionalities based on the user's permissions. Modules include: Login, Forgot password, Home, HCP Home, HCP Search, Medical Information, HCP Medical Information, HCP New Chart, Appointments, HCP Appointments, Lab Results, HCP Lab Results, and HCP Lab Requisition pages.
+The modules are divided into a split hierarchy based on what Permissions the User has. If the user has Health Care Practitioner (HCP) Permissions, they follow the left arm of the hierarchy tree, and if the user has PATIENT Permissions, they follow the right arm of the hierarchy tree (Figure 1). I designed the application to follow a two-pronged hierarchical approach to allow for scalability of the application. In addition to this, both the Patient and HCP views share a nearly identical structure, promoting reusability, with the inclusion or exclusion of specific functionalities based on the user's permissions. Modules include: Login, Forgot password, Home, HCP Home, HCP Search, Medical Information, HCP Medical Information, HCP New Chart, Appointments, HCP Appointments, Lab Results, HCP Lab Results, and HCP Lab Requisition pages.   
+
 
 ## HCI Fundamentals
 The HCI Fundamentals of the design are described below. The interface was designed based on the 8 Golden Rules of Interface Design, and can be seen through the following examples:
@@ -41,24 +45,19 @@ Some further fundamental design considerations were made outside of the recommen
 * Primary Interaction Style – Direct Manipulation was utilized as it is an excellent technique for novice users, and can be seen in the design through the use of the pop-up calendar DatePicker on the Appointments Page using the point-and-click method. This method of date selection allows a user to perform “rapid, incremental, reversible actions” (Shneiderman, 2016, p.232) by re-selecting different dates on the calendar widget. 
 * Navigation Design – The navigation menu was designed in the selection interaction style that allows point-and-click selection. Navigation design techniques were implemented in the design, including the Content Organization arrangement being displayed in a ‘most frequently used links first’ hierarchical structure, darker Colour of the menu items indicating active links, Menu Phrasing consisting of concise 1-2 descriptive words, Error Prevention with items that users should not be able to click on have been disabled and appear grayed out, and Error Correction as the interface allows users to backtrack when necessary by clicking on the desired page in the menu.
 * Form Design – Forms have been used sparingly within the design to avoid the overuse of data entry for users. In the cases where form fill-in was necessary, the following form design choices were followed: each form includes a Meaningful Title to identify the action being performed, Instructions clearly indicate what data to enter in each field, Field Labelling for all fields are presented in a fixed format to allow for directions on where to enter data, Accessibility alternative text has been included for logos and text fields to allow screen readers to interpret the interface correctly, Prompt Text is displayed to aid in data-type signaling, and Required Fields are clearly marked on each form with the traditional red asterisk so the user knows what fields are necessary to complete to be able to progress through the form and submit.
-* Dialog Design – Dialog boxes are small windows that are used in interface design to interrupt the user to allow for important selections, or notifications. Dialog boxes are used sparingly in the interface design, and includes some main features such as: Meaningful Titles that describe the nature of the notification such as “Successful Chart Submission”, Consistency in sizing and colour to allow users to recognize when a dialog box appears, Limiting Occlusion in order to avoid obstructing the main page behind the dialog box, Noticeability through the different colouring of the dialog box that allows users to easily distinguish the difference between the main pages and a dialog box that requires attention, and Sequencing of elements on the dialog box follows the top-left to bottom-right typical sequencing, where the information starts in the top-left corner, and leads the user to the bottom-right.
+* Dialog Design – Dialog boxes are small windows that are used in interface design to interrupt the user to allow for important selections, or notifications. Dialog boxes are used sparingly in the interface design, and includes some main features such as: Meaningful Titles that describe the nature of the notification such as “Successful Chart Submission”, Consistency in sizing and colour to allow users to recognize when a dialog box appears, Limiting Occlusion in order to avoid obstructing the main page behind the dialog box, Noticeability through the different colouring of the dialog box that allows users to easily distinguish the difference between the main pages and a dialog box that requires attention, and Sequencing of elements on the dialog box follows the top-left to bottom-right typical sequencing, where the information starts in the top-left corner, and leads the user to the bottom-right.   
+
 
 ## Technologies
 This application was built with the following technology
 * JavaFX
 * FXML
 * Java
-* Eclipse IDE
-
-## Run
-Below are instructions for how to run the application:
-1. Clone this repository by typing the command into a Terminal window: `git clone <repo_name>`
-2. Navigate to the new folder in the Terminal
-3. Enter the command: `javac Main.java` in the Teminal and wait. This may take a few seconds to process.
-4. Enter the command: `java Main.java` in the Terminal. The application should now be up and running.
+* Eclipse IDE.  
+  
 
 ## Login
-Login information for both a Patient and HCP user are below:   
+Login information for both a Patient and HCP user are below:     
 Patient:   
 `Email address: pat@email.com`   
 `Password: health456`.  
