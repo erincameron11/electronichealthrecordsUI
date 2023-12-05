@@ -58,11 +58,11 @@ Below are instructions for how to run the application:
 4. Enter the command: `java Main.java` in the Terminal. The application should now be up and running.
 
 ## Login
-Login information for both a Patient and HCP user are below:
-Patient:
-`Email address: pat@email.com`
-`Password: health456`
+Login information for both a Patient and HCP user are below:   
+Patient:   
+`Email address: pat@email.com`   
+`Password: health456`.  
 
-HCP:
-`Email address: hcp@email.com`
-`Password: admin123`
+HCP:   
+`Email address: hcp@email.com`.  
+`Password: admin123`   
