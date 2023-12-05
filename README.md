@@ -1,6 +1,7 @@
 # Electronic Health Records UI
 
 *Created by: Erin Cameron, for Algoma University COSC4926 Final Project*
+
 ---
 
 
